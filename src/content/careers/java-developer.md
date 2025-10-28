@@ -1,0 +1,47 @@
+---
+title: "Java Developer"
+department: "Software & Development"
+location: "Frisco, Texas"
+type: "Full-time"
+experience: "Mid Level"
+description: "Build scalable Java applications and microservices. Work with Spring Framework, REST APIs, and enterprise-grade solutions for our diverse client base."
+requirements:
+  - "3+ years of Java development experience"
+  - "Strong proficiency in Java 8+ and object-oriented programming"
+  - "Experience with Spring Framework (Spring Boot, Spring MVC)"
+  - "Knowledge of RESTful web services and API development"
+  - "Familiarity with database technologies (MySQL, PostgreSQL)"
+  - "Understanding of Maven or Gradle build tools"
+  - "Experience with version control systems (Git)"
+responsibilities:
+  - "Design and develop robust Java applications and microservices"
+  - "Build and maintain RESTful APIs and web services"
+  - "Collaborate with cross-functional teams on application architecture"
+  - "Write clean, maintainable, and well-documented code"
+  - "Participate in code reviews and maintain coding standards"
+  - "Debug and troubleshoot application issues"
+  - "Optimize application performance and scalability"
+benefits:
+  - "Competitive salary with performance bonuses"
+  - "Comprehensive health insurance package"
+  - "401(k) retirement plan with matching"
+  - "Professional development and certification support"
+  - "Modern development tools and environment"
+  - "Flexible work arrangements"
+  - "Team collaboration and learning opportunities"
+skills:
+  - "Java"
+  - "Spring Boot"
+  - "Spring Framework"
+  - "REST APIs"
+  - "MySQL"
+  - "PostgreSQL"
+  - "Maven"
+  - "Git"
+  - "Microservices"
+  - "JUnit"
+  - "Debugging"
+published: true
+featured: false
+date: "2024-05-15T09:00:00.000Z"
+---

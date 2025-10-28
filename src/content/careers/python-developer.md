@@ -1,0 +1,47 @@
+---
+title: "Python Developer"
+department: "Software & Development"
+location: "Remote"
+type: "Full-time"
+experience: "Mid Level"
+description: "Build scalable backend systems and data processing pipelines using Python. Work with Django, Flask, and modern frameworks to create robust applications."
+requirements:
+  - "3+ years of Python development experience"
+  - "Strong proficiency in Python 3.x and object-oriented programming"
+  - "Experience with web frameworks (Django, Flask, or FastAPI)"
+  - "Knowledge of database technologies and ORM frameworks"
+  - "Familiarity with RESTful API development"
+  - "Understanding of version control systems (Git)"
+  - "Experience with testing frameworks (pytest, unittest)"
+responsibilities:
+  - "Develop and deploy server-side web applications using Python"
+  - "Build RESTful APIs and web services"
+  - "Design and implement database schemas and queries"
+  - "Create automation scripts and data processing tools"
+  - "Collaborate with frontend developers on API integration"
+  - "Write comprehensive tests and maintain code quality"
+  - "Optimize application performance and troubleshoot issues"
+benefits:
+  - "Competitive salary with annual reviews"
+  - "Full health and dental insurance"
+  - "401(k) retirement savings plan"
+  - "Remote work flexibility"
+  - "Python certification and training support"
+  - "Access to latest development tools"
+  - "Professional growth opportunities"
+skills:
+  - "Python"
+  - "Django"
+  - "Flask"
+  - "FastAPI"
+  - "PostgreSQL"
+  - "SQLAlchemy"
+  - "REST APIs"
+  - "Git"
+  - "pytest"
+  - "Docker"
+  - "Linux"
+published: true
+featured: false
+date: "2024-05-16T10:00:00.000Z"
+---

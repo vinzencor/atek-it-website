@@ -1,0 +1,47 @@
+---
+title: "UI/UX Designer"
+department: "Experience & Design"
+location: "Hybrid"
+type: "Full-time"
+experience: "Mid Level"
+description: "Create exceptional user experiences for digital products. Design intuitive interfaces using Figma, conduct user research, and collaborate with development teams."
+requirements:
+  - "3+ years of UI/UX design experience"
+  - "Proficiency in design tools (Figma, Sketch, Adobe Creative Suite)"
+  - "Strong understanding of user-centered design principles"
+  - "Experience with prototyping and wireframing"
+  - "Knowledge of responsive design and mobile-first approaches"
+  - "Familiarity with design systems and component libraries"
+  - "Portfolio demonstrating strong design skills and process"
+responsibilities:
+  - "Create user interface designs and interactive prototypes"
+  - "Conduct user research and usability testing"
+  - "Develop wireframes, mockups, and design specifications"
+  - "Collaborate with developers on design implementation"
+  - "Maintain and evolve design systems and style guides"
+  - "Present design concepts to stakeholders and clients"
+  - "Stay current with design trends and best practices"
+benefits:
+  - "Competitive salary with creative bonuses"
+  - "Health and wellness benefits package"
+  - "401(k) retirement plan"
+  - "Hybrid work model with design studio access"
+  - "Design software licenses and tool budget"
+  - "Conference and workshop attendance"
+  - "Creative collaboration environment"
+skills:
+  - "UI Design"
+  - "UX Design"
+  - "Figma"
+  - "Sketch"
+  - "Prototyping"
+  - "User Research"
+  - "Wireframing"
+  - "Design Systems"
+  - "Responsive Design"
+  - "Usability Testing"
+  - "Visual Design"
+published: true
+featured: false
+date: "2024-04-10T12:00:00.000Z"
+---

@@ -1,0 +1,63 @@
+[build]
+  publish = "dist"
+  command = "npm run build"
+
+[build.environment]
+  NODE_VERSION = "18"
+
+# Netlify CMS admin access - preserve hash fragments for auth tokens
+[[redirects]]
+  from = "/admin/*"
+  to = "/admin/index.html"
+  status = 200
+  force = false
+
+# Handle auth token redirects specifically
+[[redirects]]
+  from = "/#*"
+  to = "/admin/#:splat"
+  status = 301
+  conditions = {Query = {confirmation_token = ":confirmation_token"}}
+
+[[redirects]]
+  from = "/#*"
+  to = "/admin/#:splat"
+  status = 301
+  conditions = {Query = {invite_token = ":invite_token"}}
+
+[[redirects]]
+  from = "/#*"
+  to = "/admin/#:splat"
+  status = 301
+  conditions = {Query = {recovery_token = ":recovery_token"}}
+
+# Git Gateway and Identity services are automatically available at:
+# /.netlify/git/* and /.netlify/identity/*
+# No manual redirects needed - Netlify handles these internally
+
+# Headers for security and CORS
+[[headers]]
+  for = "/admin/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+# Enable Netlify Identity
+[context.production]
+  environment = { NODE_ENV = "production" }
+
+[context.deploy-preview]
+  environment = { NODE_ENV = "development" }
+
+[context.branch-deploy]
+  environment = { NODE_ENV = "development" }

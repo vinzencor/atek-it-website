@@ -1,0 +1,103 @@
+backend:
+  name: git-gateway
+  accept_roles:
+    - admin
+    - editor
+  branch: main
+
+media_folder: "public/images/uploads"
+public_folder: "/images/uploads"
+
+# Site URL for preview - ensure proper token handling
+site_url: https://atek-landing.netlify.app
+display_url: https://atek-landing.netlify.app
+
+# Logo for admin interface
+logo_url: /ATEK IT LOGO white.svg
+
+# Authentication settings
+auth:
+  providers:
+    - name: email
+
+# Editor settings
+editor:
+  preview: true
+
+# Publish mode
+publish_mode: editorial_workflow
+
+# Local backend for development (comment out for production)
+# local_backend: true
+
+collections:
+  - name: "careers"
+    label: "Careers"
+    folder: "src/content/careers"
+    create: true
+    slug: "{{slug}}"
+    extension: "md"
+    format: "frontmatter"
+    fields:
+      - { label: "Job Role", name: "title", widget: "string", hint: "The job title/position name" }
+      - { label: "Job Description", name: "description", widget: "markdown", hint: "Complete job description including summary, requirements, responsibilities, and qualifications. First 2 lines will be shown in collapsed view, full content in expanded view." }
+      - { label: "Job Level", name: "experience", widget: "select", options: ["Entry Level", "Mid Level", "Senior Level", "Lead/Principal"], hint: "Experience level required" }
+      - { label: "Job Location", name: "location", widget: "string", default: "Frisco, Texas", hint: "Work location" }
+      - { label: "Job Category", name: "jobCategory", widget: "relation", collection: "job-categories", search_fields: ["name"], value_field: "name", display_fields: ["name"], required: true, hint: "Select which job category this position belongs to" }
+      - { label: "Employment Type", name: "type", widget: "select", options: ["Full-time", "Part-time", "Contract", "Internship"], default: "Full-time" }
+      - { label: "Published", name: "published", widget: "boolean", default: true }
+      - { label: "Featured", name: "featured", widget: "boolean", default: false }
+      - { label: "Publish Date", name: "date", widget: "datetime", default: "" }
+
+  - name: "job-categories"
+    label: "Job Categories"
+    folder: "src/content/job-categories"
+    create: true
+    slug: "{{slug}}"
+    extension: "md"
+    format: "frontmatter"
+    fields:
+      - { label: "Category Name", name: "name", widget: "string", hint: "The name of the job category (e.g., Software & Development)" }
+      - { label: "Display Order", name: "order", widget: "number", default: 1, hint: "Order in which this category appears (1 = first)" }
+      - { label: "Published", name: "published", widget: "boolean", default: true }
+      - { label: "Description", name: "description", widget: "text", required: false, hint: "Optional description of this category" }
+      - { label: "Associated Jobs", name: "jobs", widget: "relation", collection: "careers", search_fields: ["title", "department"], value_field: "{{slug}}", display_fields: ["title", "department"], multiple: true, required: false, hint: "Select which job listings belong to this category" }
+
+  - name: "career-settings"
+    label: "Career Page Settings"
+    files:
+      - label: "Career Page Content"
+        name: "career-page"
+        file: "src/content/career-page.md"
+        fields:
+          - { label: "Hero Title", name: "hero_title", widget: "string" }
+          - { label: "Hero Subtitle", name: "hero_subtitle", widget: "text" }
+          - { label: "Why Join Section Title", name: "why_join_title", widget: "string" }
+          - { label: "Why Join Description", name: "why_join_description", widget: "text" }
+          - label: "Benefits"
+            name: "benefits"
+            widget: "list"
+            fields:
+              - { label: "Icon", name: "icon", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+          - { label: "Application Process Title", name: "application_title", widget: "string" }
+          - { label: "Application Instructions", name: "application_instructions", widget: "markdown" }
+          - { label: "Contact Email", name: "contact_email", widget: "string" }
+          - { label: "Office Location", name: "office_location", widget: "string" }
+
+  - name: "downloadable-guides"
+    label: "Downloadable Guides"
+    folder: "src/content/guides"
+    create: true
+    slug: "{{slug}}"
+    extension: "md"
+    format: "frontmatter"
+    fields:
+      - { label: "Guide Name", name: "title", widget: "string", required: true, hint: "Example: Digital Transformation Readiness Checklist" }
+      - { label: "Description", name: "description", widget: "string", required: true, pattern: [".{1,150}", "Must be 150 characters or less"], hint: "Brief description of the guide (max 150 characters)" }
+      - { label: "Icon", name: "icon", widget: "image", required: true, media_folder: "/public/images/guides", public_folder: "/images/guides", hint: "Upload SVG, PNG, or JPG icon for the guide" }
+      - { label: "PDF File", name: "pdfFile", widget: "file", required: true, media_folder: "/public/downloads/guides", public_folder: "/downloads/guides", hint: "Upload the PDF guide file" }
+      - { label: "Published", name: "published", widget: "boolean", default: false, hint: "Set to true to make this guide visible on the website" }
+      - { label: "Sort Order", name: "order", widget: "number", default: 1, hint: "Lower numbers appear first" }
+      - { label: "Publish Date", name: "date", widget: "datetime", default: "" }
